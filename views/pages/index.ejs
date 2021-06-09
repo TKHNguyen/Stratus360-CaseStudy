@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cyber City Comics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>Cyber City Comics</h1>
+  <p>Cyber City Comics is one of the fastest growing comic book stores in downtown Toronto since the 1990s.</p> 
+</div>
+
+<div class="row main" style="margin: 20px;">
+  <div class="col-md-6">
+    <div style="float:right; width: 500px">
+        <p></p>
+        
+        <img src=<%= data.img %> width="500px" height="500px" alt=<%= data.alt %> title=<%= data.title %> >
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div style="float:clear;">
+        <div class="row">
+            <div class="col-md-12"><h2><%= data.safe_title %> (<%= data.year %>) #<%= data.num %> </h2></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <h3><b>Published:</b> <%= data.month %>/<%= data.day %>/<%= data.year %> </h3> 
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"><p><%= data.transcript %></p></div>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- end class="row main" -->
+
+<div class="row">
+  <div class="col-md-12" style="text-align: center">
+    <div style="margin: auto; width: 500px; padding: 10px;">
+    <form action="index.php" method="post">
+        <input type="hidden" name="current" id="current" value="">
+
+        <a href="/1" type="button" class="btn btn-primary text-center" style="width : 90px; "  >First</a>
+        <a href=<%= links.previousl %> type="button" class="btn btn-primary text-center" style="width : 90px; "  >Previous</a>
+        <a href=<%= links.randoml %> type="button" class="btn btn-primary text-center" style="width : 90px; "  >Random</a>
+        <a href=<%= links.nextl %> type="button" class="btn btn-primary text-center" style="width : 90px; "  >Next</a>
+        <a href=<%= links.lastl %> type="button" class="btn btn-primary text-center" style="width : 90px; "  >Last</a>
+    </form>
+    
+    </div>
+  </div>
+
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>2021</p>
+</div>
+
+</body>
+</html>
